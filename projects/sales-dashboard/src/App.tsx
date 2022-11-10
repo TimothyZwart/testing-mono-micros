@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Button } from "@unified/components";
+import "@unified/components/dist/style.css";
 
 function App() {
  const [count, setCount] = useState(0);
