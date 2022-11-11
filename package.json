@@ -5,6 +5,9 @@
   "packages/*",
   "projects/*"
  ],
+ "scripts": {
+  "sales-dashboard": "lerna exec --scope @unified/sales-dashboard -- yarn dev"
+ },
  "devDependencies": {
   "lerna": "^6.0.3"
  }

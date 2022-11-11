@@ -4,7 +4,7 @@ import React from "react";
 export default function Welcome(props: any) {
  // Display the name passed as props
  return (
-  <button className="bg-indigo-500 text-3xl font-bold underline ">
+  <button className="tw-bg-red-500 tw-text-3xl tw-font-bold tw-underline">
    Hello, {props.name}
   </button>
  );
