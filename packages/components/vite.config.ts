@@ -7,27 +7,23 @@ import path from "node:path";
 
 export default defineConfig({
  plugins: [
-  react(),
+  react({
+   jsxRuntime: "classic",
+  }),
   dts({
    insertTypesEntry: true,
   }),
  ],
  build: {
-  sourcemap: true,
   lib: {
-   name: "Components",
+   name: "components",
    entry: path.resolve(__dirname, "src/main.ts"),
-   formats: ["es", "umd"],
-   fileName: (format) => `components.${format}.js`,
+   formats: ["es", "umd", "cjs", "iife"],
+   fileName: (format) => `index.${format}.js`,
   },
   rollupOptions: {
+   inlineDynamicImports: true,
    external: ["react", "react-dom"],
-   output: {
-    globals: {
-     react: "React",
-     "react-dom": "ReactDOM",
-    },
-   },
   },
  },
 });
